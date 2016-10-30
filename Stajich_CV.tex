@@ -1,0 +1,622 @@
+\documentclass[10pt]{article}
+\usepackage{refcount}
+\usepackage{charter}
+\usepackage{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage[resetlabels]{multibib}
+\usepackage[ManyBibs,LabelsAligned]{currvita}
+\usepackage{ifpdf}
+\usepackage{denselists}
+%\usepackage{revnum}
+
+\ifpdf
+  \usepackage[pdftex,pdfpagelabels=false]{hyperref}
+\else
+  \usepackage[hypertex,pdfpagelabels=false]{hyperref}
+\fi
+\usepackage{setspace} 
+\hypersetup{
+  pdfauthor={Jason E Stajich}
+  pdftitle={CV for Jason Stajich}
+  pdfsubject={Detailed CV for Jason},
+  urlcolor=blue,
+}
+
+% Initialize each paper type for which you need a bibliography.
+% Just a dummy parameter is necessary.
+\newcites{journal}{nih}
+%\newcites{submitpaper}{foo}
+\newcites{book}{nih}
+\newcites{review}{nih}
+\newcites{report}{nih}
+\newcites{essay}{nih}
+\newcites{commentary}{nih}
+
+\usepackage{etaremune}
+\makeatletter
+\long\def\thebibliography#1{%
+  \section*{\refname}%
+  \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}
+  \settowidth{\dimen0}{\@biblabel{#1}}%
+  \setlength{\dimen2}{\dimen0}%
+  \addtolength{\dimen2}{\labelsep}
+  \sloppy
+  \clubpenalty 4000 
+  \@clubpenalty 
+  \clubpenalty 
+  \widowpenalty 4000
+  \sfcode `\.\@m
+  \renewcommand{\labelenumi}{\@biblabel{\theenumi}} % labels like [3], [2], [1]
+  \begin{etaremune}[labelwidth=\dimen0,leftmargin=\dimen2]\@openbib@code
+}
+\def\endthebibliography{\end{etaremune}}
+\def\@bibitem#1{%
+  \item \if@filesw\immediate\write\@auxout{\string\bibcite{#1}{\the\value{enumi}}}\fi\ignorespaces
+}
+\makeatother
+
+\begin{document}
+
+% Specify the bibtex style that you want for each paper type
+\bibliographystyle{nih}
+%\bibliographystylesubmitpaper{nih}
+\bibliographystylejournal{nih}
+\bibliographystylereview{nih}
+\bibliographystylebook{nih}
+\bibliographystylereport{nih}
+\bibliographystylecommentary{nih}
+\bibliographystyleessay{nih}
+
+% We'll use this length to change the defaults in some of our lists.
+\newlength{\oldcvlabelwidth}
+\renewcommand*{\cvbibname}{}
+
+% This is what will appear at the very top of your CV.
+\begin{cv}{\centerline{Jason E. Stajich}}
+
+% Items have more vertical space between them than line breaks.
+% Note: if you want a linebreak after each cvlist title, you can do:
+% \begin{cvlist}{Title \hspace{3in}}
+
+\setlength{\cvlabelwidth}{18mm}
+\begin{cvlistcompact}{Contact}
+	\item Department of Plant Pathology \& Microbiology, University of California, Riverside, CA 92521 
+	\item \textbf{Telephone:} 951-827-2363 \textbf{Email:} jason.stajich@ucr.edu \textbf{Web:} \url{http://lab.stajich.org/}
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{\bf Education}
+\item [2006--2009] Postdoctoral training, University of California, Berkeley, CA. Mentor: Dr. John W Taylor
+\item [2001--2006] Ph.D. in Genetics and Genomics, Duke University, Durham, NC. Advisor: Dr. Fred S Dietrich
+\item [1995--1999] B.S. in Computer Science, Duke University, Durham, NC
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{\bf Academic appointments:}
+\item [2014--] Associate Professor with tenure
+\item [2009--2014] Assistant Professor \\
+     Department of Plant Pathology \& Microbiology.  \\
+     Institute of Integrative Genome Biology. \\ 
+     University of California, Riverside, CA. 
+
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{Honors and Awards:}
+\item [2015] Kavli Fellow, Kavli Frontiers of Science
+\item [2014] C. J. Alexopoulos Prize, Mycological Society for America
+\item [2006--2009] Miller Institute for Basic Research in Science,
+  Postdoctoral Research Fellowship
+\item [2003--2006] National Science Foundation, Graduate Research Fellowship
+\end{cvlistcompact}
+
+% These commands will make our papers be indented after the first line
+% to make the author's name stand out more.  Also, we reduce the
+% indentation of the paper type titles (e.g., Journal Papers,
+% Conference Paper) compared to regular cvlist items.
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\renewcommand*{\bibindent}{1.5em}
+% Do bibaddtoleftmargin instead of biblabelsep if you're
+% not using manybib Or open bib
+%\renewcommand*{\bibaddtoleftmargin}{1.5em}
+\renewcommand*{\biblabelsep}{1.5em}
+
+% To update, before doing latexmk, run:
+% bibtex journal
+% bibtex refpaper
+% bibtex unrefpaper
+% bibtex techreport
+\begin{cvlist}{Publications: (Listed in reverse chronological order.)}
+  % With multibib, each cite command has the type after it.
+  \item \textbf{Peer Reviewed Publications}
+
+\makeatletter
+\def\thebibliography#1{\list
+{\arabic{enumiv}.}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+\advance\leftmargin\labelsep
+\usecounter{enumiv}}
+\def\newblock{\hskip .11em plus .33em minus .07em}
+\sloppy\clubpenalty4000\widowpenalty4000
+\sfcode`\.=1000\relax
+}
+\let\endthebibliography=\endlist
+\makeatother
+
+
+\def\mybibitem#1{\item}
+
+ \nocitejournal{Nguyen2016}
+ \nocitejournal{Ahrendt2016}
+ \nocitejournal{Chen2016}
+ \nocitejournal{Cisse2016}
+  \nocitejournal{Short2016}
+  \nocitejournal{Spatafora2016}
+  \nocitejournal{Castanera2016}
+  \nocitejournal{Lee2016}
+  \nocitejournal{deMan2016}
+  \nocitejournal{URen2016}
+  \nocitejournal{Pieuchot2015}
+  \nocitejournal{Wang2015}
+  \nocitejournal{Liu2015}
+  \nocitejournal{Willger2015}
+  \nocitejournal{Collins2015}
+  \nocitejournal{Melida2015}
+  \nocitejournal{Teixeira2014}
+  \nocitejournal{Ouyang2014}
+  \nocitejournal{Inglis2014}
+  \nocitejournal{Treseder2014}
+  \nocitejournal{Janbon2014}
+  \nocitejournal{Sachs2014}
+  \nocitejournal{Traeger2013}
+  \nocitejournal{Gryganskyi2013}
+  \nocitejournal{Gioti2013b}
+  \nocitejournal{James2013}
+  \nocitejournal{Rosenblum2013}
+  \nocitejournal{Robb2013}
+  \nocitejournal{Jamieson2013}
+  \nocitejournal{Cheng2013}
+  \nocitejournal{Gioti2013a}
+  \nocitejournal{Nygren2012}
+  \nocitejournal{Abramyan2012}
+  \nocitejournal{Gioti2012}
+  \nocitejournal{Stajich2012}
+  \nocitejournal{Joneson2011}
+  \nocitejournal{Ellison2011}
+  \nocitejournal{DSouza2011}
+  \nocitejournal{Burns2010}
+  \nocitejournal{Smith2010}
+  \nocitejournal{Levesque2010}
+  \nocitejournal{Strandberg2010}
+  \nocitejournal{Ohm2010}
+  \nocitejournal{Stajich2010}
+  \nocitejournal{Neafsey2010}
+  \nocitejournal{Nowrousian2010}
+  \nocitejournal{Sharpton2009}
+  \nocitejournal{Fisher2009}
+  \nocitejournal{Rosenblum2008}
+  \nocitejournal{Regier2008}
+  \nocitejournal{Martin2008}
+  \nocitejournal{Lilly2008}
+  \nocitejournal{Hu2008}
+  \nocitejournal{Stajich2007a}
+  \nocitejournal{Fraser2007}
+  \nocitejournal{Harrison2007}
+  \nocitejournal{Erwin2007}
+  \nocitejournal{Fitzpatrick2006}
+  \nocitejournal{Demuth2006}
+  \nocitejournal{James2006}
+  \nocitejournal{Kaemper2006}
+  \nocitejournal{Stajich2006a}
+  \nocitejournal{Giles2006}
+  \nocitejournal{Cramer2006}
+  \nocitejournal{Hesselberth2006}
+  \nocitejournal{Stajich2005}
+  \nocitejournal{Mitreva2005}
+  \nocitejournal{Leman2005}
+  \nocitejournal{Hahn2005}
+  \nocitejournal{Fraser2005}
+  \nocitejournal{Kraus2004}
+  \nocitejournal{Stein2003}
+  \nocitejournal{Hahn2003}
+  \nocitejournal{Stein2002}
+  \nocitejournal{Stajich2002}
+  \nocitejournal{Baxter2002}
+  
+
+%  \nocitejournal{Lu2014}
+%  \nocitejournal{Sain2014}
+
+
+  \bibliographyjournal{stajichpubs}
+
+\item \textbf{Reviews (Refereeed)}
+  \nocitereview{Hibbett2013}
+  \nocitereview{Rosenblum2010}
+  \nocitereview{Rosenblum2010a}
+  \nocitereview{Stajich2009a}
+  \nocitereview{Stajich2006}
+  \bibliographyreview{stajichpubs}
+
+  \item \textbf{Books and Book Chapters} 
+  \nocitebook{Stajich2015}  
+  \nocitebook{Stajich2013}  
+  \nocitebook{Fisher2012}
+  \nocitebook{McKay2010}
+  \nocitebook{Edwards2009}
+  \nocitebook{Stajich2007}
+  \nocitebook{Stajich2006b}
+  \nocitebook{Coghlan2006}
+
+  \bibliographybook{stajichpubs}
+
+\item \textbf{Meeting and Technical Reports}
+  \nocitereport{Momany2015}
+  \nocitereport{Kennedy2015}
+  \nocitereport{Glass2014}
+  \nocitereport{Bates2013}
+  \nocitereport{Lapp2007}
+
+  \bibliographyreport{stajichpubs}
+
+\item \textbf{Commentaries and Book Reviews}
+  \nocitecommentary{Stajich2016}
+  \nocitecommentary{Stajich2011}
+  \nocitecommentary{Stajich2009b}
+
+  \bibliographycommentary{stajichpubs}
+  
+\item \textbf{Essays}
+  \nociteessay{Stajich2014}
+  \bibliographyessay{stajichpubs}
+  
+\begin{cvlistcompact}{\bf Software and other Products}
+  \item BioPerl - \url{http://bioperl.org} - Core developer
+\item Github \url{http://github.com/hyphaltip} - individual
+  projects
+\item Github \url{http://github.com/stajichlab} - lab
+  projects
+
+ \item Github \url{http://github.com/1KFG} - 1000 Fungal
+   genomes project
+\item Github \url{http://github.com/zygolife} - ZyGoLife NSF project
+  and associated phylogenomics
+\item Website: \url{http://1000.fungalgenomes.org} - 1KFG project
+\item Website: \url{http://zygolife.org} - NSF Zygolife
+\item Website: \url{http://dynamiterice.org} - NSF Rice Transposable
+    Element project
+\item Website: \url{http://fungalgenomes.org/blog} - ``The Hyphal
+  Tip'' A Blog I write about Fungal Genomics
+\item Website \& Database (Collaboration): \url{http://fungidb.org}
+\end{cvlistcompact}
+
+
+\end{cvlist}
+% Reset the label indentation
+\setlength{\cvlabelwidth}{24mm}
+
+%\begin{cvlist}{Employment}
+%	\item[Summer 2002] Visiting Researcher, Lincoln D Stein laboratory \\
+%          Cold Spring Harbor Laboratories, Cold Spring Harbor, NY
+%	\item[1999--2001] Analyst/Programmer, Center for Human
+%          Genetics \\
+%          Duke University Medical Center, Durham, NC          
+%\end{cvlist}
+
+\begin{cvlistcompact}{\bf Grant Support:}
+\item [{\bf Ongoing support}]
+
+\item [2011-2016] W.M. Keck Foundation. \$1M \\
+''New Active Transposable Elements for Mosquito Genetics.'' \\
+Co-PI with PI SR Wessler and P Atkinson (UC Riverside). 
+
+\item [2011-2017] National Science Foundation. Plant Genome -
+  IOS-1027542. \$4.9M  \\
+  ``CPGS: Genome-wide impact of \textit{mPing} transposition on rice phenotypic diversity.'' \\
+Co-PI with PI SR Wessler (UC Riverside); T Brutnell (Danforth), Q Sun
+(Cornell). \\
+\url{http://dynamiterice.org}
+
+\item [2014-2017] National Institutes of Health - 1-R01-GM108492-01. \$1.5M \\
+``Dynamics of bacterial-fungal interactions in chronic lung infections'' \\
+Co-PI with PI D Hogan (Dartmouth)
+
+\item [2015-2018] National Science Foundation. GO Life
+  DEB-1441715. \$714k (\$2.5M total award) \\
+``Collaborative Research: The Zygomycetes Genealogy of Life
+  (ZyGoLife)- the conundrum of Kingdom Fungi'' \\
+  PI. Collaborative award with 4 other primary PIs and ~12
+  collaborating labs including J Spatafora (Oregon State), TY James (U
+  Michigan), R Robertson (Arizona State) \\
+\url{http://zygolife.org} 
+
+\item [2016-2019] National Science Foundation. DEB-1557110. \$317k
+  (\$709k total award) \\
+``Collaborative Research: Phylogenomics and evolutionary history of the anaerobic fungal group, Neocallimastigomycota'' \\
+PI. Collaborative award with Noha Youssef and Mostafa Elshahed (Oklahoma State)
+ 
+\item [{\bf Completed support}]
+
+\item [2010-2013] Burroughs Wellcome Fund. \$500k \\
+ ``FungiDB: A Pan Fungal Genome Database''. \\
+Co-PI with PI DS Roos (U Pennsylvania)
+
+\item [2011-2012] UC Riverside, Chancellor's Strategic Investment
+  Funds. \$25k \\
+``Coelomomyces Genomics for Mosquito Vector Control'' \\
+Co-PI with B Federici, A Ray (UC Riverside)
+
+\item [2013-2014] UC Riverside, Office of Research Strategic Investment
+  Funds. \$50k \\
+``High-throughput synthetic biology for natural products discovery'' \\
+Co-PI with PI K Borkovich, C. Larive (UC Riverside)
+
+\item [2013-2014] National Institutes of Health - 1-R03-AI105636-01. \$168k \\
+``Annotation of \textit{Cryptococcus} genomes by comprehensive
+  curation of published literature'' \\
+PI with Co-PI G Sherlock (Stanford)
+
+  \item [2011-2014] Alfred P. Sloan Foundation. \$750k \\
+``MoBe DAC: A data coordinating center for the Sloan Indoor
+Environment Metagenomic Project - Fungal resources''. \\
+PI.  Coordinated with F Meyer (U Chicago/ANL), R Knight (U Colorado), M Sogin (Marine Biological Lab).
+
+\item [2014-2015] National Science Foundation. DBI-1429826. \$548k \\
+``MRI: Acquisition of a Big Data Compute Cluster for Interdisciplinary
+  Research''
+Co-PI with PI T Girke, Co-PIs J Bailey-Serres, M Allen, and S Lonardi (UCR)
+
+\end{cvlistcompact}
+% cvlist items can take dates as a parameter.
+
+%\setlength{\cvlabelwidth}{12mm}
+%\begin{cvlistcompact}{\bf Invited Seminars and conference presentations (2009--2012)}
+%
+%\item [2011] $\cdot$ Center for Comparative Genomics \& Bioinformatics, Penn State University, State College, PA.
+%\item $\cdot$ Department of Biology, San Diego State University, San Diego, CA
+%\item $\cdot$ Bio-IT Cloud Summit, La Jolla, CA
+%\item $\cdot$ Molecular Mycology Course, Marine Biological Lab, Woods Hole, MA
+%\item $\cdot$ Mycological Society of America, Fairbanks, AK
+%\item $\cdot$ Workshop in Comparative Genomics, Ft Collins, CO
+%\item $\cdot$ $8^{th}$ Internation Cryptococcus and Cryptococcosis Conference, Charleston, SC
+%\item $\cdot$ Symbiosis Workshop, Yosemite NP, CA
+%\item $\cdot$ $26^{th}$ Fungal Genetics Conference, Asilomar Conference Center, Pacific Grove, CA. %(Session Chair: Comparative and Functional Genomics)
+%\item $\cdot$ University of California-Davis, Department of
+%  Plant Pathology, Davis, CA
+%\item [2010] $\cdot$ National University of Ireland, Maynooth, Department of Biology, Maynooth, Ireland
+%\item $\cdot$ Basidiomycete Genomics workshop, Joint Genome Institute User
+%  meeting, Walnut Creek, CA
+%\item $\cdot$ University of California-Riverside, GGB Seminar Series, Riverside, CA.
+%\item $\cdot$ 2010 Neurospora Conference, Asilomar Conference Center, Pacific Grove, CA
+%\item $\cdot$ PBoFF Symposium, Texas A \& M University, College Station, TX.
+%\item $\cdot$ Cellular and Molecular Biology of Fungi, Gordon Research
+%  Conference, Holderness, NH.
+%\item $\cdot$ Mycological Society of America, Lexington, KY
+%\item $\cdot$ $9^{th}$ International Mycological Congress, Scotland, UK
+%\item [2009] $\cdot$ University of California-Riverside, Department of Computer Science, Riverside, CA.
+%\item $\cdot$ University of California-Los Angeles, MSRI Bioinformatics Series,
+%  Los Angeles, CA.
+%\item $\cdot$ Comparative Genomics of Eukaryotic Microorganisms, EMBO
+%  Conference, San Feliu de Guixols, Spain. 
+%\item $\cdot$ University of Idaho, Initative for Bioinformatics and
+%  Evolutionary Studies, Moscow, ID.
+%\item $\cdot$ Molecular Mycology Course, Marine Biological Lab,
+%  Woods Hole, MA.
+%\item $\cdot$ Mycological Society of America, Snowbird, UT.
+%\item $\cdot$ Eccles Institute, University of Utah, Deptartment of Human Genetics, Salt Lake City, UT.
+%\item $\cdot$ Bioinformatics Symposium \& Workshop, Oregon State University,
+%  Corvallis, OR. 
+%\item $\cdot$ $25^{th}$ Fungal Genetics Conference, Asilomar Conference
+%  Center, Pacific Grove, CA. %(Session Chair: Evolutionary Genetics \& Genomics) 
+%\item $\cdot$ University of Arizona, Genomics IGERT Program, Tucson, AZ.
+%\item $\cdot$ Michigan State University, Pythium Genome Workshop, East
+%  Lansing, MI.
+%\item $\cdot$ Cornell University, Department of Plant Pathology, Ithaca, NY.
+%\item $\cdot$ Graduate Research School in Genomic Ecology, Winter meeting,
+%  Lund University, Lund, Sweden. 
+%\end{cvlistcompact}
+
+\setlength{\cvlabelwidth}{18mm}
+
+\begin{cvlistcompact}{\bf Service}
+\item[{\bf University and Departmental}]
+\item [2015--2016] Director \& Admissions Advisor, Microbiology Graduate Program
+\item [2014--2015] Gradute Advisor, Microbiology Graduate Program
+  \\  
+\item[{\bf Editorial Boards}]
+\item [2016--] Editorial Board, Current Opinion in Microbiology
+\item [2015--] Associate Editor, Microbial Genomics
+\item [2014--] Associate Editor, Fungal Genetics \& Biology
+\item [2013,2015] Guest Associate Editor, PLoS Genetics
+\item [2013] Guest Associate Editor, Mycologia
+\item [2011--] Faculty Member in Microbial Genetics \& Genomics,
+  Faculty of 1000
+\item [2010--2015] Editorial Board, Eukaryotic Cell.
+\item [2009--2016] Section Editor, PLoS One.
+\item [2007--2016] Academic Editor, PLoS One.
+\\
+  
+\item [{\bf Professional Service}]
+\item [2018-2020] Co-Vice Chair (2018) and Co-Chair (2020) of Cellular and Molecular Fungal Biology, Gordon Research Conference
+\item [2014--2018] Neurospora Policy Committee
+\item [2013--2019] Fungal Genetics Policy Committee
+\item [2012--2017] Scientific advisory board, Plant Microbe Interactions - DOE Science Focus Area, Oak Ridge National Laboratory
+\item [2012--2018] Scientific advisory board, WormBase
+\item [2012--2015] Scientific advisory board, EnsEMBL Genomes
+\item [2010--2012] Councilor for Genetics \& Molecular Biology, Mycological Society of America
+\item [2009--2010] Advisory Board for Genomic Encyclopedia of Fungi, Joint Genome Institute, US Department of Energy.
+\item [2009--2010] Pan-Fungal Database Steering Committee for Burroughs Welcome Fund.
+\item [2007--2009] Scientific advisory board for NSF funded Computer Science
+  Education Revitalization project to PI Owen Astrachan, Duke
+  University.
+\item [2005--2008] Scientific advisory committee for Information Technology and
+  Computing infrastructure for the National Center for Evolutionary
+  Synthesis (NESCent).
+\item [2005--2011] President and Board Member [2005--Present], Open Bioinformatics Foundation \url{http://www.open-bio.org/}
+\item [2001--] Co-Project leader, BioPerl. \url{http://www.bioperl.org/}
+%\item [2002-2008] Program Committee, Bioinformatics Open Source Conference; Chair (2002).
+\\
+
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{Membership in Professional Societies:}
+\item [2002--] International Society for Computational Biology
+\item [2004--] Society for Molecular Biology and Evolution
+\item [2007--] American Society for Microbiology
+\item [2004--] Genetics Society of America 
+\item [2007--] Mycological Society of America 
+\item [2001--] BioPerl developed. Co-Project leader (2001-2012).
+\item [2002--] Open Bioinformatics Foundation 
+%\item [2006--2007] Phyloinformatics working group, National Evolutionary
+%  Synthesis Center, Durham, NC. 
+\end{cvlistcompact}
+
+%\begin{cvlistcompact}{Departmental Service:}
+%\item [2010-2011] Admissions committee, Microbiology graduate program
+%\item [2010-2011] Seminar committee, Plant Pathology \& Microbiology
+%\item [2010-2011] Website committee, Microbiology Graduate program
+%\item [2010-2011] Curriculum commitee, Genetic, Genomics, \&
+%  Bioinformatics program
+%\item [2010-2011] Social affairs committee, Plant Pathology \& Microbiology
+%\item [2009-2010] Space and Infrastructure committee, Plant Pathology \& Microbiology
+%\end{cvlistcompact}
+
+\begin{cvlistcompact}{Graduate Students:}
+\item [2009--13] PhD student, Divya Sain. Genetics, Genomics, \&
+  Bioinformatics. Currently: Bioinformatics Scientist at Ambry Genetics.
+\item [2010--12] MS student, Yi (Zoe) Zhu. Genetics, Genomics, \&
+  Bioinformatics. Currently: Biostatistician at Biostatistical Consulting Inc.
+\item [2014] MS student, Elizabeth Holmes, Plant Pathology \& Microbiology
+\item [2010--14] PhD student, Yizhou Wang. Plant Biology. Currently:
+  Research Bioinformatician at Cedars Sinai.
+\item [2011--15] PhD student, Steven Ahrendt. Genetics, Genomics, \&
+  Bioinformatics. Currently: Postdoc at UC Berkeley/LBNL \& DOE Joint
+  Genome Institute.
+\item [2015--] PhD Student, Sawyer Masonjones. Genetics, Genomics, \&
+  Bioinformatics
+\item [2015--] PhD Student, Nuttapom Pombubpa. Plant Pathology.
+\item [2016--] PhD Student, Derreck Carter-House. Plant Pathology
+\item [2016--] PhD Student, Jes\'{u}s Pe\~{n}a, Microbiology
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{Postdoctoral Fellows:}
+\item [2010--2011] John Abramyan, PhD. Currently: Postdoc at Univ of West
+  Virgina
+\item [2011--2014] Sofia Robb, PhD. Currently: Genomics Scientist at
+  Stowers Institute.
+\item [2012--2014] Brad Cavinder, PhD. Currently: Research Associate at Michigan
+  State University
+\item [2012--2015] Peng Liu, PhD. 
+\item [2013--] Jinfeng Chen, PhD
+\item [2013--2015] Ousmane Ciss\'{e}, PhD - Swiss National Science
+  Foundation Fellow. Currently: Postdoctoral Fellow at NIH Clinical Center.
+\item [2014--2015] Rodrigo Olarte. Currently: NSF Postdoctoral Fellow
+  at Univ of Minnesota.
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{Visitors:}
+\item [2010--13 (4, 2-3 month vists)] Anastasia Gioti, PhD,
+  Dept of Evolution Biology, Uppsala University, SWEDEN
+\item [2010 (Spring)] Suzanne Joneson, PhD, Department of Biology, University of Idaho
+\item [2011 (Spring)] Edgar Medina Tovar, MSc
+  Mycology and Phytopathology Lab, Universidad de Los Andes, Bogota, COLOMBIA
+\item [2012 (Summer)] Andrii Gryganski, PhD, Visiting Researcher, Duke University 
+\item [2013--14] Venkatesh Moktali, PhD,
+  FungiDB Project, Visiting Research Fellow, Oregon State University
+\item [2014] Ra\'{u}l Castanera Andr\'{e}s, Visiting Graduate Student,
+  Universidad P\'{u}blica de Navarra, Pamplona, SPAIN
+\item [2015 (Spring)] Natalie Vande Pol, Visiting Graduate Student (Bonito Lab), Michigan State University
+\item [2015--16] Zhinquan Song, Visiting Graduate Student (Guangyi
+  Wang Lab), Tianjin University, CHINA
+\item [2015 (Fall)] John Yinka Odebode, Visiting Graduate Student on a West
+  African Research Assocation Fellowship, University of Lagos, NIGERIA.
+\item [2015 (Fall)] Marco Marconi, Visiting Graduate Student,
+    Universidad Polit\'{e}cnica de Madrid, Madrid, SPAIN
+\item [2015--2016] Claudia Coleine, Visiting Graduate Student,
+    Universit\'{a} degli Studi della Tuscia, Viterbo, ITALY
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{Teaching:}
+
+\item [2010,2012] BIO5C - Introductory Ecology \& Evolution 
+\item [2011] BIO20 - The Dynamic Genome - Research module for \textit{Neurospora} research
+\item [2011,2013] GEN240B - Tools for Bioinformatics and Genome Analysis
+\item [2015] MCBL124 - Microbial Pathogenesis
+\item [2011--] MCBL211 - Microbial Ecology
+\item [2012-2015] MCBL202 - Microbial Pathogenesis \& Physiology
+\item [2012-] GEN220 - Computational Analysis of High Throughput Biological Data \url{http://hyphaltip.github.io/GEN220_2015}
+\item [2016--] BIO119 - Introduction to Genomics and Bioinformatics
+
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{Undergraduate Researchers:}
+\item[2010--] Sponsor for summer research students in MARCU, STEM, and CAMP
+  programs at UCR.
+\item [2010--2012] Jessica De Anda, UCR. STEM grant participant
+  (2010); MARC USTAR student 2010-12. Current MS Student, Claremont College
+\item [2010--2011] Annie Nguyen, UCR.
+\item [2011--2012] Carlos Rojas Torres, UCR. CAMP (2011); lab
+  researcher. Current: Gilead Pharmaceuticals.
+\item [2011] Ramy Wissa, UCR. Pre-MARC USTAR Summer student.
+\item [2011--2012] Lorena Rivera, UCR. Pre-MARC USTAR student (2011); lab
+  researcher, CNAS Dean's Fellow Summer Undergraduate Research (Summer 2012)
+\item [2012--2014] Erum Khan, UCR.
+\item [2012--2014] Sapphire Ear, UCR. Current: CityYear and
+  matriculating MD student (TBD).
+\item [2012--2014] Megna Tiwari, UCR. Current: MS student at Cal
+  State-Long Beach
+\item [2013--2014] Dylan McVay, UCR.
+\item [2013--2016] Na Jeong, UCR, Summer RISE Scholar (2013) and lab researcher
+\item [2014] Spencer Swansen, Summer NSF REU student (Seattle Pacific University)
+\item [2015--2016] Justin Shen, UCR.
+\item [2015--2016] Serena Choi, UCR.
+\item [2015--] Dillon McDonald, UCR Summer HSI-STEM (2015) and lab researcher
+\item [2015] Christina Uriarte, UCR. Pre-MARC USTAR student.
+\item [2015--] Jericho Ortanez, UCR.
+\item [2015--2016] Leandra Ibrahim, UCR.
+\item [2015--] Deane Kim, UCR.
+\item [2016--] Georgiy Smirnov, UCR.
+\item [2016--] Meng (Josh) Chung, UCR.
+  
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{Dissertation and thesis committees:}
+\item [2011] Sourav Roy, PhD, GGB
+\item Yi Zhou, MS, GGB $\star$
+\item [2012] Andrew Defries, PhD, Plant Sciences
+\item [2013] Gilbert Uribe, MS, Plant Pathology
+\item Divya Sain, PhD, GGB $\star$
+\item [2014] Yizhou Wang, PhD, Plant Sciences $\star$
+\item Zhigang Wu, PhD, GGB
+\item [2015] Presha Shah, PhD, Biochemistry
+\item Ming Wang, PhD, Plant Pathology
+\item Steven Ahrendt, PhD, GGB $\star$
+\item Ilva Cabrera, PhD, GGB
+\item Jinfeng Lu, PhD, GGB
+\item James Ricci, MS, Entomology
+\item [2016] Ryan Arvidson, PhD, Biochemistry
+\item Francis Na, MS, Microbiology
+\item Jishu Ha, PhD, GGB
+\item Arit Gosh, PhD, GGB
+\item [ongoing] Kelsey Gano, Microbiology
+\item Kun Liu, Plant Biology
+\item Raissa Green, GGB
+\item Amelia Lindsey, Entomology
+\item Patrick Schriener, GGB
+\item Cynthia Dick, EEOB
+\item Eric Gordon, Entomology
+\item Eric Smith, GGB
+\item Dereck O'Meara, EEOB
+\item Yi Zhai, CMDB
+\item Andrea Vu, Plant Pathology
+\item Steven Bolaris, GGB
+\item Dinusha Maheepala Mudalige, Plant Biology
+\item Nuttapon Pombubpa, Plant Pathology $\star$
+\item Derreck Carter-House, Plant Pathology $\star$
+\item Sawyer Masonjones, GGB $\star$
+\item Jes\'{u}s Pe\~{n}a, Microbiology $\star$
+\item Nathan Robinett, Joint Doctoral Program in Evolutionary Biology, SDSU-UCR
+\item Katherine Picard, UPGG - Duke University
+\item Edgar Medina, UPGG - Duke University
+\item Lluvia Vargas, Microbiolog\'{i}a - CICESE, MEXICO
+\item Dan Vanderpool, Biology, University of Montana
+\end{cvlistcompact}
+\end{cv}
+\end{document}
