@@ -1,2 +1,9 @@
-# CV
-My CV
+
+To format
+```
+make
+```
+
+Dependancies
+============
+* pdflatex
