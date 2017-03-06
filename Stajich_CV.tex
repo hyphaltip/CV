@@ -23,16 +23,14 @@
 }
 
 % Initialize each paper type for which you need a bibliography.
-% Just a dummy parameter is necessary.
-\newcites{journal}{nih}
-%\newcites{submitpaper}{foo}
-\newcites{book}{nih}
-\newcites{review}{nih}
-\newcites{report}{nih}
-\newcites{essay}{nih}
-\newcites{commentary}{nih}
+\newcites{journal}{Publications: (Listed in reverse chronological order.)}
+\newcites{submitted}{Submitted Manuscripts and Preprints}
+\newcites{book}{Books and Book Chapters} 
+\newcites{review}{Reviews (Refereeed)}
+\newcites{report}{Meeting and Technical Reports}
+\newcites{essay}{Essays}
+\newcites{commentary}{Commentaries and Book Reviews}
 
-\usepackage{etaremune}
 \makeatletter
 \long\def\thebibliography#1{%
   \section*{\refname}%
@@ -55,21 +53,21 @@
 }
 \makeatother
 
-\begin{document}
-
 % Specify the bibtex style that you want for each paper type
 \bibliographystyle{nih}
 %\bibliographystylesubmitpaper{nih}
 \bibliographystylejournal{nih}
+\bibliographystylesubmitted{nih}
 \bibliographystylereview{nih}
 \bibliographystylebook{nih}
 \bibliographystylereport{nih}
 \bibliographystylecommentary{nih}
 \bibliographystyleessay{nih}
 
-% We'll use this length to change the defaults in some of our lists.
 \newlength{\oldcvlabelwidth}
 \renewcommand*{\cvbibname}{}
+
+\begin{document}
 
 % This is what will appear at the very top of your CV.
 \begin{cv}{\centerline{Jason E. Stajich}}
@@ -129,9 +127,6 @@
 % bibtex refpaper
 % bibtex unrefpaper
 % bibtex techreport
-\begin{cvlist}{Publications: (Listed in reverse chronological order.)}
-  % With multibib, each cite command has the type after it.
-  \item \textbf{Peer Reviewed Publications}
 
 \makeatletter
 \def\thebibliography#1{\list
@@ -145,65 +140,62 @@
 \let\endthebibliography=\endlist
 \makeatother
 
-
-\def\mybibitem#1{\item}
-
-\nocitejournal{Nguyen2016}
-\nocitejournal{Torres-Cruz2016}
- \nocitejournal{Ahrendt2016}
- \nocitejournal{Chen2016}
- \nocitejournal{Cisse2016}
-  \nocitejournal{Short2016}
+\begin{cvlist}{Publications: (Listed in reverse chronological order.)}
+\item \textbf{Peer Reviewed Publications}
+  \def\mybibitem#1{\item}
+  \nocitejournal{Nguyen2017}
+  \nocitejournal{Chen2017}
   \nocitejournal{Spatafora2016}
-  \nocitejournal{Castanera2016}
-  \nocitejournal{Lee2016}
-  \nocitejournal{deMan2016}
-  \nocitejournal{URen2016}
-  \nocitejournal{Pieuchot2015}
-  \nocitejournal{Wang2015}
-  \nocitejournal{Liu2015}
-  \nocitejournal{Willger2015}
-  \nocitejournal{Collins2015}
-  \nocitejournal{Melida2015}
-  \nocitejournal{Teixeira2014}
-  \nocitejournal{Ouyang2014}
-  \nocitejournal{Inglis2014}
-  \nocitejournal{Treseder2014}
-  \nocitejournal{Janbon2014}
-  \nocitejournal{Sachs2014}
-  \nocitejournal{Traeger2013}
-  \nocitejournal{Gryganskyi2013}
-  \nocitejournal{Gioti2013b}
-  \nocitejournal{James2013}
-  \nocitejournal{Rosenblum2013}
-  \nocitejournal{Robb2013}
-  \nocitejournal{Jamieson2013}
-  \nocitejournal{Cheng2013}
-  \nocitejournal{Gioti2013a}
-  \nocitejournal{Nygren2012}
-  \nocitejournal{Abramyan2012}
-  \nocitejournal{Gioti2012}
-  \nocitejournal{Stajich2012}
-  \nocitejournal{Joneson2011}
-  \nocitejournal{Ellison2011}
-  \nocitejournal{DSouza2011}
-  \nocitejournal{Burns2010}
-  \nocitejournal{Smith2010}
-  \nocitejournal{Levesque2010}
-  \nocitejournal{Strandberg2010}
-  \nocitejournal{Ohm2010}
-  \nocitejournal{Stajich2010}
-  \nocitejournal{Neafsey2010}
-  \nocitejournal{Nowrousian2010}
-  \nocitejournal{Sharpton2009}
-  \nocitejournal{Fisher2009}
-  \nocitejournal{Rosenblum2008}
-  \nocitejournal{Regier2008}
-  \nocitejournal{Martin2008}
-  \nocitejournal{Lilly2008}
-  \nocitejournal{Hu2008}
-  \nocitejournal{Stajich2007a}
-  \nocitejournal{Fraser2007}
+\nocitejournal{Short2016}
+\nocitejournal{Castanera2016}
+\nocitejournal{Lee2016}
+\nocitejournal{deMan2016}
+\nocitejournal{URen2016}
+\nocitejournal{Pieuchot2015}
+\nocitejournal{Wang2015}
+\nocitejournal{Liu2015}
+\nocitejournal{Willger2015}
+\nocitejournal{Collins2015}
+\nocitejournal{Melida2015}
+\nocitejournal{Teixeira2014}
+\nocitejournal{Ouyang2014}
+\nocitejournal{Inglis2014}
+\nocitejournal{Treseder2014}
+\nocitejournal{Janbon2014}
+\nocitejournal{Sachs2014}
+\nocitejournal{Traeger2013}
+\nocitejournal{Gryganskyi2013}
+\nocitejournal{Gioti2013b}
+\nocitejournal{James2013}
+\nocitejournal{Rosenblum2013}
+\nocitejournal{Robb2013}
+\nocitejournal{Jamieson2013}
+\nocitejournal{Cheng2013}
+\nocitejournal{Gioti2013a}
+\nocitejournal{Nygren2012}
+\nocitejournal{Abramyan2012}
+\nocitejournal{Gioti2012}
+\nocitejournal{Stajich2012}
+\nocitejournal{Joneson2011}
+\nocitejournal{Ellison2011}
+\nocitejournal{DSouza2011}
+\nocitejournal{Burns2010}
+\nocitejournal{Smith2010}
+\nocitejournal{Levesque2010}
+\nocitejournal{Strandberg2010}
+\nocitejournal{Ohm2010}
+\nocitejournal{Stajich2010}
+\nocitejournal{Neafsey2010}
+\nocitejournal{Nowrousian2010}
+\nocitejournal{Sharpton2009}
+\nocitejournal{Fisher2009}
+\nocitejournal{Rosenblum2008}
+\nocitejournal{Regier2008}
+\nocitejournal{Martin2008}
+\nocitejournal{Lilly2008}
+\nocitejournal{Hu2008}
+\nocitejournal{Stajich2007a}
+\nocitejournal{Fraser2007}
   \nocitejournal{Harrison2007}
   \nocitejournal{Erwin2007}
   \nocitejournal{Fitzpatrick2006}
@@ -225,14 +217,13 @@
   \nocitejournal{Stein2002}
   \nocitejournal{Stajich2002}
   \nocitejournal{Baxter2002}
-  
-
-%  \nocitejournal{Lu2014}
-%  \nocitejournal{Sain2014}
-
-
   \bibliographyjournal{stajichpubs}
 
+\item \textbf{Submitted Manuscripts and Preprints}
+\nocitesubmitted{Torres-Cruz2016}
+\nocitesubmitted{Ahrendt2016}
+  \bibliographysubmitted{stajichpubs}
+  
 \item \textbf{Reviews (Refereeed)}
   \nocitereview{Hibbett2013}
   \nocitereview{Rosenblum2010}
@@ -337,7 +328,12 @@ Role: Co-I. PI: D Hogan (Dartmouth)
   (\$709k total award) \\
 ``Collaborative Research: Phylogenomics and evolutionary history of the anaerobic fungal group, Neocallimastigomycota'' \\
 Role: PI. Collaborative award with PI: Noha Youssef and Mostafa Elshahed (Oklahoma State)
- 
+
+\item [2017-2020] Univ of California-Office of the President, MRPI. \$105k
+  (\$1.7M total award) \\
+``UC Valley Fever Research Initiative'' \\
+Role: Co-PI. Collaborative award with PI: Anita Sil (UCSF)
+
 \item [{\bf Completed support}]
 
 \item [2010-2013] Burroughs Wellcome Fund. \$500k \\
@@ -578,73 +574,74 @@ Role: Co PI. PI T Girke. Co-Is J Bailey-Serres, M Allen, and S Lonardi (UCR)
 \end{cvlistcompact}
 % cvlist items can take dates as a parameter.
 
-\setlength{\cvlabelwidth}{7mm}
+\setlength{\cvlabelwidth}{8mm}
 \begin{cvlistcompact}{\bf Invited Seminars and conference presentations (2015--Present)}
-\item [2016] $\cdot$  \textit{Fungal population genomics of emerging
-  diseases in plants, frogs, and people} \\
+\item [2016] $\cdot$
+%  \textit{Fungal population genomics of emerging
+%  diseases in plants, frogs, and people} \\
   Mycological Society of America 2016 Meeting. Berkeley, CA. 
-  \item $\cdot$     \textit{Genomes of early diverging fungi enable
-    new insights into the evolution of complexity in fungi} \\
-    CIFAR Integrated Microbial Biodiversity Program/Review,  Toronto, ON, CANADA.
-  \item $\cdot$     \textit{Genome evolution in early diverging fungi from the 1000 fungal genomes perspective} \\
-    Plenary Speaker. 13th European Fungal Genetics Conference.
-    Paris, France. 
-  \item $\cdot$ \textit{A Novel DNA transposon is recognized and 
-    silenced by Meiotic Silencing by small RNAs} \\
+\item $\cdot$
+  %\textit{Genomes of early diverging fungi enable
+%    new insights into the evolution of complexity in fungi} \\
+    CIFAR Integrated Microbial Biodiversity Program. Toronto, ON, CANADA.
+  \item $\cdot$   %  \textit{Genome evolution in early diverging fungi from the 1000 fungal genomes perspective} \\
+    13th European Fungal Genetics Conference.
+    Paris, France.  {\it Plenary Speaker}
+  \item $\cdot$ % \textit{A Novel DNA transposon is recognized and 
+%    silenced by Meiotic Silencing by small RNAs} \\
     Neurospora Conference. Asilomar Conference Center, Pacific
     Grove, CA.
-  \item $\cdot$ \textit{Insights from the 1000
-    Fungal Genomes project: Comparative biology and phylogeny} \\
+  \item $\cdot$ % \textit{Insights from the 1000
+%    Fungal Genomes project: Comparative biology and phylogeny} \\
     University Program in Genetics \& Genomics. Duke University, Durham, NC. 
-  \item $\cdot$ \textit{Genomics of early diverging fungi for phylogeny and
-  comparative biology} \\
+  \item $\cdot$ % \textit{Genomics of early diverging fungi for phylogeny and
+ % comparative biology} \\
     Dept of Plant Pathology. University of California, Davis,
     CA. 
-  \item $\cdot$  \textit{Insights from the
-    1000 Fungal Genomes project: Comparative biology and phylogeny} \\
+  \item $\cdot$ % \textit{Insights from the
+  %  1000 Fungal Genomes project: Comparative biology and phylogeny} \\
     University of Exeter. United Kingdom.   
-\item [2015] $\cdot$  \textit{Evolutionary Genomics of Early Branches
-  of the Fungal Tree of Life} \\
+\item [2015] $\cdot$ % \textit{Evolutionary Genomics of Early Branches
+%  of the Fungal Tree of Life} \\
   Exploring the genomic complexity and diversity of
-  eukaryotes. EMBO Conference, San Feliu de Guixols, SPAIN.\\
-
-\item $\cdot$     \textit{Comparing molecular and
-  morphological fungal evolution through studies of fungal genomes} \\
+  eukaryotes. EMBO Conference, San Feliu de Guixols, SPAIN. 
+\item $\cdot$   %  \textit{Comparing molecular and
+%  morphological fungal evolution through studies of fungal genomes} \\
   XI CONGRESO NATIONAL DE MICOLOGIA, Sociedad Mexicana de
-  Micologia. Merida, Yucatan, MEXICO. 
-  \item $\cdot$   \textit{Evolution of complexity in fungi from evolutionary
-    genomics of early diverging lineage} \\
+  Micologia. Merida, Yucatan, MEXICO. {\it Plenary Speaker}
+  \item $\cdot$ %  \textit{Evolution of complexity in fungi from evolutionary
+%    genomics of early diverging lineage} \\
   School of Plant Sciences, University of Arizona, Tucson,
     AZ. 
-  \item $\cdot$ \textit{Evolutionary genomics of early branches of the
-    fungal tree \& the ZyGoLife project} \\
+  \item $\cdot$ % \textit{Evolutionary genomics of early branches of the
+%    fungal tree \& the ZyGoLife project} \\
     Eighth International Conference on Mycorrhiza.
     Flagstaff, AZ. 
-  \item $\cdot$ \textit{Evolutionary genomics of early branches
-    of the fungal tree: A view from the 1000 Fungal Genomes Project
-    and ZyGoLife Project} \\
+  \item $\cdot$ %\textit{Evolutionary genomics of early branches
+    %of the fungal tree: A view from the 1000 Fungal Genomes Project
+   % and ZyGoLife Project} \\
     Mycological Society of America 2015 Meeting. Edmonton, AB, CANADA. 
-  \item $\cdot$  \textit{Evolutionary genomics of early
-    branches of the fungal tree: The 1000 Fungal Genomes Project} \\
+  \item $\cdot$  %\textit{Evolutionary genomics of early
+   % branches of the fungal tree: The 1000 Fungal Genomes Project} \\
     Society for Molecular Biology \& Evolution 2015. Vienna, Austria.
-  \item $\cdot$  \textit{Evolutionary and functional genomics in early
-    diverging fungi} \\
-    Bioinformatics Seminar series. University of California, Los Angeles.
-  \item $\cdot$  \textit{Evolutionary and functional genomics in early
-    diverging fungi} \\
+  \item $\cdot$  %\textit{Evolutionary and functional genomics in early
+   % diverging fungi} \\
+    Bioinformatics Seminar series. University of California, Los
+    Angeles, CA.
+  \item $\cdot$  %\textit{Evolutionary and functional genomics in early
+    %diverging fungi} \\
     University of California, Merced, CA. 
-  \item $\cdot$   \textit{Phylogenomics of the Zygomycete lineages: Exploring
-    phylogeny and genome evolution} \\
+  \item $\cdot$   %\textit{Phylogenomics of the Zygomycete lineages: Exploring
+    %phylogeny and genome evolution} \\
     28th Fungal Genetics Conference. Asilomar Conference Center,
     Pacific Grove, CA. 
-  \item $\cdot$  \textit{Evolutionary and functional genomics in early
-    diverging fungi} \\
+  \item $\cdot$ % \textit{Evolutionary and functional genomics in early
+    %diverging fungi} \\
     Center for Genome Research and Biocomputing Seminar. Oregon
     State University, Corvallis, OR.
-  \item $\cdot$ \textit{Clues to multicellular evolution of fungi from
-    comparative genomics \& studies of early diverging fungi} \\
-    Microbiology and Molecular Genetics. Oklahoma State University, Stillwater, OK. \\
-    
+  \item $\cdot$ %\textit{Clues to multicellular evolution of fungi from
+   % comparative genomics \& studies of early diverging fungi} \\
+    Dept of Microbiology and Molecular Genetics. Oklahoma State University, Stillwater, OK. \\    
 %  \item [2014] $\cdot$ Stazione Zoologica Anton Dohrn. Naples,
 %    ITALY. \textit{Evolutionary genomics and the origins of multicellular forms in filamentous fungi}
 %
