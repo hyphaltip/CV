@@ -4,6 +4,7 @@ all: CV
 CV:
 	pdflatex ${TEX_NAME}.tex
 	bibtex journal
+	bibtex genome
 	bibtex submitted
 	bibtex review
 	bibtex book
