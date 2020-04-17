@@ -1053,6 +1053,7 @@ FUNCTION {inbook}
       new.block
       format.number.series output
       new.sentence
+
       format.publisher.address output
     }
     {
@@ -1094,6 +1095,7 @@ FUNCTION {incollection}
     { format.incoll.inproc.crossref output.nonnull
       format.chapter.pages output
     }
+
   if$
   format.doi output
   new.block
@@ -1463,7 +1465,7 @@ FUNCTION {presort}
   'sort.key$ :=
 }
 
-%ITERATE {presort}
+%REVERSE {presort}
 %SORT
 STRINGS { last.label next.extra }
 INTEGERS { last.extra.num number.label }
@@ -1500,7 +1502,7 @@ FUNCTION {reverse.pass}
   label extra.label * 'label :=
 }
 %EXECUTE {initialize.extra.label.stuff}
-%ITERATE {forward.pass}
+%REVERSE {forward.pass}
 %REVERSE {reverse.pass}
 %FUNCTION {bib.sort.order}
 %{ sort.label
@@ -1516,7 +1518,7 @@ FUNCTION {reverse.pass}
 %  #1 entry.max$ substring$
 %  'sort.key$ :=
 %}
-%ITERATE {bib.sort.order}
+%REVERSE {bib.sort.order}
 %SORT
 FUNCTION {begin.bib}
 { preamble$ empty$
@@ -1536,7 +1538,7 @@ FUNCTION {begin.bib}
 }
 EXECUTE {begin.bib}
 EXECUTE {init.state.consts}
-ITERATE {call.type$}
+REVERSE {call.type$}
 FUNCTION {end.bib}
 { newline$
   "\end{thebibliography}" write$ newline$

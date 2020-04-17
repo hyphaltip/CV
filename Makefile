@@ -1,5 +1,5 @@
-TEX_NAME = Stajich_CV
-all: CV
+TEX_NAME= Stajich_CV
+all: CV 
 
 CV:
 	pdflatex ${TEX_NAME}.tex
@@ -13,6 +13,7 @@ CV:
 	bibtex essay
 	pdflatex ${TEX_NAME}.tex
 	pdflatex ${TEX_NAME}.tex
+
 
 clean:
 	rm -f *.aux *.bbl *.blg
