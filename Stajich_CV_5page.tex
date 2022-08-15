@@ -1,0 +1,286 @@
+\documentclass[10pt]{article}
+\usepackage{refcount}
+\usepackage{charter}
+\usepackage{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage[resetlabels]{multibib}
+\usepackage[ManyBibs,LabelsAligned]{currvita}
+\usepackage{ifpdf}
+\usepackage{denselists}
+%\usepackage{revnum}
+
+\ifpdf
+  \usepackage[pdftex,pdfpagelabels=false]{hyperref}
+\else
+  \usepackage[hypertex,pdfpagelabels=false]{hyperref}
+\fi
+\usepackage{setspace} 
+\hypersetup{
+  pdfauthor={Jason E Stajich}
+  pdftitle={CV for Jason Stajich}
+  pdfsubject={Detailed CV for Jason},
+  urlcolor=blue,
+}
+
+% Initialize each paper type for which you need a bibliography.
+\newcites{journalFivePage}{Selected Peer Reviewed Publications}
+
+\makeatletter
+\long\def\thebibliography#1{%
+  \section*{\refname}%
+  \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}
+  \settowidth{\dimen0}{\@biblabel{#1}}%
+  \setlength{\dimen2}{\dimen0}%
+  \addtolength{\dimen2}{\labelsep}
+  \sloppy
+  \clubpenalty 4000 
+  \@clubpenalty 
+  \clubpenalty 
+  \widowpenalty 4000
+  \sfcode `\.\@m
+  \renewcommand{\labelenumi}{\@biblabel{\theenumi}} % labels like [3], [2], [1]
+  \begin{etaremune}[labelwidth=\dimen0,leftmargin=\dimen2]\@openbib@code
+}
+\def\endthebibliography{\end{etaremune}}
+\def\@bibitem#1{%
+  \item \if@filesw\immediate\write\@auxout{\string\bibcite{#1}{\the\value{enumi}}}\fi\ignorespaces
+}
+\makeatother
+
+% Specify the bibtex style that you want for each paper type
+\bibliographystyle{nih}
+\bibliographystylejournalFivePage{nih}
+
+\newlength{\oldcvlabelwidth}
+\renewcommand*{\cvbibname}{}
+
+\begin{document}
+
+% This is what will appear at the very top of your CV.
+\begin{cv}{\centerline{Jason E. Stajich}}
+
+% Items have more vertical space between them than line breaks.
+% Note: if you want a linebreak after each cvlist title, you can do:
+% \begin{cvlist}{Title \hspace{3in}}
+
+\setlength{\cvlabelwidth}{18mm}
+\begin{cvlistcompact}{Contact}
+\item{Department of Plant Pathology \& Microbiology, Institute for
+  Integrative Genome Biology, \\
+  University of California, Riverside, CA 92521}
+  \item{ \textbf{Telephone:} +1 951-827-2363 \textbf{Email:}
+    jason.stajich@ucr.edu \\
+    \textbf{Web:} \url{http://lab.stajich.org/} {\tt @stajichlab @hyphaltip}}
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{\bf Education}
+\item [2006--2009] Postdoctoral training, University of California, Berkeley, CA. Mentor: Dr. John W Taylor
+\item [2001--2006] Ph.D. in Genetics and Genomics, Duke University, Durham, NC. Advisor: Dr. Fred S Dietrich
+\item [1995--1999] B.S. in Computer Science, Duke University, Durham, NC
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{\bf Academic appointments:}
+\item [2014--] Associate Professor (with tenure)
+  \\ Dept of Plant Pathology \& Microbiology. University of California Riverside
+\item [2009--2014] Assistant Professor
+  \\ Dept of Plant Pathology \& Microbiology. University of California Riverside.
+\item [2006--2009] Postdoctoral Research Fellow. Miller Institute for Basic Research. \\
+  Dept of Plant and Microbial Biology, University of California
+  Berkeley.
+\end{cvlistcompact}
+
+\begin{cvlistcompact}{Honors and Awards:}
+\item [2015] Kavli Fellow, Kavli Frontiers of Science
+\item [2014] C. J. Alexopoulos Prize, Mycological Society for America
+\item [2006--2009] Miller Institute for Basic Research in Science,
+  Postdoctoral Research Fellowship
+\item [2003--2006] National Science Foundation, Graduate Research Fellowship
+\end{cvlistcompact}
+
+% These commands will make our papers be indented after the first line
+% to make the author's name stand out more.  Also, we reduce the
+% indentation of the paper type titles (e.g., Journal Papers,
+% Conference Paper) compared to regular cvlist items.
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\renewcommand*{\bibindent}{1.5em}
+% Do bibaddtoleftmargin instead of biblabelsep if you're
+% not using manybib Or open bib
+%\renewcommand*{\bibaddtoleftmargin}{1.5em}
+\renewcommand*{\biblabelsep}{1.5em}
+
+% To update, before doing latexmk, run:
+% bibtex journal
+% bibtex refpaper
+% bibtex unrefpaper
+% bibtex techreport
+
+\makeatletter
+\def\thebibliography#1{\list
+{\arabic{enumiv}.}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+\advance\leftmargin\labelsep
+\usecounter{enumiv}}
+\def\newblock{\hskip .11em plus .33em minus .07em}
+\sloppy\clubpenalty4000\widowpenalty4000
+\sfcode`\.=1000\relax
+}
+\let\endthebibliography=\endlist
+\makeatother
+
+\begin{cvlist}{Selected Publications (out of 90): (Listed in reverse chronological order.)}
+\item 
+  \def\mybibitem#1{\item}
+  \nocitejournalFivePage{Ahrendt2017}
+  \nocitejournalFivePage{Nguyen2017}
+  \nocitejournalFivePage{Chen2017}
+  \nocitejournalFivePage{Spatafora2016}
+  \nocitejournalFivePage{Castanera2016}
+  \nocitejournalFivePage{deMan2016}
+  \nocitejournalFivePage{Wang2015}
+  \nocitejournalFivePage{Liu2015}
+  \nocitejournalFivePage{Melida2015}
+\nocitejournalFivePage{Inglis2014}
+\nocitejournalFivePage{Gioti2013b}
+\nocitejournalFivePage{James2013}
+\nocitejournalFivePage{Rosenblum2013}
+\nocitejournalFivePage{Robb2013}
+\nocitejournalFivePage{Gioti2013a}
+\nocitejournalFivePage{Abramyan2012}
+\nocitejournalFivePage{Stajich2012}
+\nocitejournalFivePage{Joneson2011}
+\nocitejournalFivePage{Ellison2011}
+\nocitejournalFivePage{Stajich2010}
+\nocitejournalFivePage{Nowrousian2010}
+\nocitejournalFivePage{Sharpton2009}
+\nocitejournalFivePage{Martin2008}
+\nocitejournalFivePage{Stajich2007a}
+\nocitejournalFivePage{Fitzpatrick2006}
+\nocitejournalFivePage{James2006}
+\nocitejournalFivePage{Kaemper2006}
+\nocitejournalFivePage{Stajich2006a}
+\nocitejournalFivePage{Fraser2005}
+\nocitejournalFivePage{Stein2002}
+\nocitejournalFivePage{Stajich2002}
+\bibliographyjournalFivePage{stajichpubs}
+  
+\begin{cvlistcompact}{\bf Software and other Products}
+  \item $\cdot$ BioPerl - \url{http://bioperl.org} - Core developer
+\item  $\cdot$ Github projects \url{http://github.com/stajichlab},
+  \url{http://github.com/hyphaltip}, \url{http://github.com/1KFG} - 1000 Fungal
+   genomes, \url{http://github.com/zygolife} ZyGoLife Phylogenomics
+\item $\cdot$ ``The Hyphal Tip'': \url{http://fungalgenomes.org/blog}
+  - I write about fungal genomics
+  Tip''$\cdot$ Comparative geomomics website \& Database (Collaboration): \url{http://fungidb.org}
+\end{cvlistcompact}
+
+
+\end{cvlist}
+% Reset the label indentation
+\setlength{\cvlabelwidth}{24mm}
+
+%\begin{cvlist}{Employment}
+%	\item[Summer 2002] Visiting Researcher, Lincoln D Stein laboratory \\
+%          Cold Spring Harbor Laboratories, Cold Spring Harbor, NY
+%	\item[1999--2001] Analyst/Programmer, Center for Human
+%          Genetics \\
+%          Duke University Medical Center, Durham, NC          
+%\end{cvlist}
+
+\begin{cvlistcompact}{\bf Grant Support:}
+\item [{\bf Ongoing support}]
+
+\item [2011-2016] W.M. Keck Foundation. (\$1M) ''New Active
+  Transposable Elements for Mosquito Genetics.'' \\
+Role: Co-I. PI: SR Wessler (UC Riverside). Co-I: P Atkinson (UC Riverside). 
+
+\item [2011-2017] NSF IOS-1027542. (\$4.9M) ``CPGS: Genome-wide impact of \textit{mPing} transposition on rice phenotypic diversity.'' \\
+Role: Co-I. PI: SR Wessler (UC Riverside). Co-I: T Brutnell, Q Sun. 
+
+\item [2014-2017] NIH 1-R01-GM108492-01. (\$1.5M) ``Dynamics of bacterial-fungal interactions in chronic lung infections'' \\
+Role: Co-I. PI: D Hogan (Dartmouth)
+
+\item [2015-2018] NSF GO Life DEB-1441715. (\$714k;\$2.5M total award) ``The Zygomycetes Genealogy of Life (ZyGoLife)- the conundrum of Kingdom Fungi'' \\
+  Role: PI. 3 other PIs and ~12 collaborating labs. \url{http://zygolife.org} 
+
+\item [2016-2019] NSF DEB-1557110. (\$317k;\$709k total award) ``Phylogenomics and evolutionary history of the anaerobic fungal group, Neocallimastigomycota'' \\
+Role: PI. Collaborative award with PI: Noha Youssef \& Mostafa Elshahed (Oklahoma State)
+
+\item [2017-2020] UCalifornia Office President. (\$105k;\$1.7M total award) ``UC Valley Fever Research Initiative'' \\
+Role: Co-PI. Collaborative award with PI: Anita Sil (UCSF)
+
+\item [{\bf Completed support}]
+
+\item [2010-2013] Burroughs Wellcome Fund. (\$500k) ``FungiDB: A Pan Fungal Genome Database''. \textbf{Role:} Co-I. PI: DS Roos (U Pennsylvania)
+
+\item [2013-2014] NIH 1-R03-AI105636-01. (\$168k) ``Annotation of
+  \textit{Cryptococcus} genomes by comprehensive curation of published
+  literature.'' \textbf{Role:} PI. Co-I G Sherlock (Stanford)
+
+  \item [2011-2014] Alfred P. Sloan Foundation. (\$750k) ``MoBe DAC: A
+    data coordinating center for the Sloan Indoor Environment
+    Metagenomic Project - Fungal resources''. \textbf{Role:} PI.
+    Coordinated project with grantees Folker Meyer, Rob Knight, Mitchell Sogin.
+
+\setlength{\cvlabelwidth}{18mm}
+  
+\item [{\bf Professional Service}]
+\item [2018-2020] Co-Vice Chair (2018) and Co-Chair (2020) of Cellular and Molecular Fungal Biology, Gordon Research Conference
+\item [2014--2018] Neurospora Policy Committee, Co-Organized 2016 Neurospora conference
+\item [2013--2019] Fungal Genetics Policy Committee
+\item [2012--2018] Scientific advisory board (SAB): WormBase
+\item [2012--2017] SAB: Plant Microbe Interactions - DOE Science Focus Area, Oak Ridge National Laboratory
+\item [2012--2017] SAB: EnsEMBL Genomes
+\item [2010--2012] Councilor (Genetics \& Molecular Biology) Mycological Society of America
+\item [2009--2010] Advisory Board, Genomic Encyclopedia of Fungi, Joint Genome Institute
+\item [2005--2013] President (2005-2011), Board Member [2005--2013], Open Bioinformatics Foundation
+\item [2001--] Co-Project leader, BioPerl. \url{http://www.bioperl.org/}
+%\item [2002-2008] Program Committee, Bioinformatics Open Source Conference; Chair (2002).
+\\
+
+\end{cvlistcompact}
+
+
+\setlength{\cvlabelwidth}{8mm}
+\begin{cvlistcompact}{\bf Invited Seminars and conference presentations (2015--Present)}
+\item [2017] $\cdot$ 29$^{th}$ Pleneary lecturer. Fungal Genetics,
+  Asilomar Conference Grounds, Pacific Grove, CA
+  \item $\cdot$ Keynote, Oomycete Molecular Genetics Network. Asilomar Conference Grounds, Pacific Grove, CA
+\item [2016] $\cdot$
+%  \textit{Fungal population genomics of emerging
+%  diseases in plants, frogs, and people} \\
+  Mycological Society of America 2016 Meeting. Berkeley, CA. 
+\item $\cdot$
+  %\textit{Genomes of early diverging fungi enable
+%    new insights into the evolution of complexity in fungi} \\
+    CIFAR Integrated Microbial Biodiversity Program. Toronto, ON, CANADA.
+  \item $\cdot$   %  \textit{Genome evolution in early diverging fungi from the 1000 fungal genomes perspective} \\
+    13th European Fungal Genetics Conference.
+    Paris, France.  {\it Plenary Speaker}
+  \item $\cdot$ % \textit{A Novel DNA transposon is recognized and 
+%    silenced by Meiotic Silencing by small RNAs} \\
+    Neurospora Conference. Asilomar Conference Center, Pacific
+    Grove, CA.
+\item [2015] $\cdot$ % \textit{Evolutionary Genomics of Early Branches
+%  of the Fungal Tree of Life} \\
+  Exploring the genomic complexity and diversity of
+  eukaryotes. EMBO Conference, San Feliu de Guixols, SPAIN. 
+\item $\cdot$   %  \textit{Comparing molecular and
+%  morphological fungal evolution through studies of fungal genomes} \\
+  XI CONGRESO NATIONAL DE MICOLOGIA, Sociedad Mexicana de
+  Micologia. Merida, Yucatan, MEXICO. {\it Plenary Speaker}
+  \item $\cdot$ % \textit{Evolutionary genomics of early branches of the
+%    fungal tree \& the ZyGoLife project} \\
+    Eighth International Conference on Mycorrhiza.
+    Flagstaff, AZ. 
+  \item $\cdot$ %\textit{Evolutionary genomics of early branches
+    %of the fungal tree: A view from the 1000 Fungal Genomes Project
+   % and ZyGoLife Project} \\
+    Mycological Society of America 2015 Meeting. Edmonton, AB, CANADA. 
+  \item $\cdot$  %\textit{Evolutionary genomics of early
+   % branches of the fungal tree: The 1000 Fungal Genomes Project} \\
+    Society for Molecular Biology \& Evolution 2015. Vienna, Austria.
+\end{cvlistcompact}
+
+
+\end{cv}
+\end{document}
