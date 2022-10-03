@@ -31,6 +31,7 @@
 \newcites{submitted}{Submitted Manuscripts and Preprints}
 \newcites{book}{Books and Book Chapters}
 \newcites{review}{Reviews (Refereed)}
+\newcites{consortia}{Consortia publications}
 \newcites{report}{Meeting and Technical Reports}
 \newcites{essay}{Essays}
 \newcites{commentary}{Commentaries and Book Reviews}
@@ -67,6 +68,7 @@
 \bibliographystylereport{nih}
 \bibliographystylecommentary{nih}
 \bibliographystyleessay{nih}
+\bibliographystyleconsortia{nih}
 
 \newlength{\oldcvlabelwidth}
 \renewcommand*{\cvbibname}{}
@@ -153,6 +155,16 @@
 \begin{cvlist}{Publications:}
 \item \textbf{Peer Reviewed Publications}
   \def\mybibitem#1{\item}
+  \nocitejournal{NarunskyHaziza2022}
+  \nocitejournal{MeloTeixeira2022a}
+  \nocitejournal{Amses2022}
+  \nocitejournal{Gryganskyi2022}
+  \nocitejournal{Chang2022}
+  \nocitejournal{Maccaro2022}
+  \nocitejournal{Blachowicz2022}
+  \nocitejournal{Maltz2022}
+  \nocitejournal{MalarC2022}
+  \nocitejournal{SouzaPacheco2022}
   \nocitejournal{Lofgren2022a}
   \nocitejournal{Coleine2022b}
   \nocitejournal{MeloTeixeira2022}
@@ -181,6 +193,7 @@
   \nocitejournal{Hollin2021}
   \nocitejournal{Albanese2021}
   \nocitejournal{Geiser2020}
+  \nocitejournal{ODonnell2020}
   \nocitejournal{Ulzurrun2021}
   \nocitejournal{Lee2021}
   \nocitejournal{EudesFilho2020}
@@ -316,6 +329,9 @@
   \bibliographyjournal{stajichpubs}
 
 \item \textbf{Microbial Resource Announcements}
+  \nocitegenome{Stajich2022}
+  \nocitegenome{Ettinger2022b}
+  \nocitegenome{Ettinger2022a}
   \nocitegenome{Coleine2021}
   \nocitegenome{Ward2021}
   \nocitegenome{Stajich2021}
@@ -328,13 +344,17 @@
   \bibliographygenome{stajichpubs}
 
 \item \textbf{Submitted Manuscripts and Preprints}
-  \nocitesubmitted{Ladner2022}
+  \nocitesubmitted{Kurbessoian2022}
+  \nocitesubmitted{Reynolds2022}
+  \nocitesubmitted{Lofgren2022}
+  \nocitesubmitted{Hanafy2022}
+  \nocitesubmitted{Wang2022}
   \nocitesubmitted{CarterHouse2020}
   \nocitesubmitted{Alvarado2020}
   \nocitesubmitted{Unruh2019}
   \bibliographysubmitted{stajichpubs}
 
-\item \textbf{Reviews (Refereeed)}
+\item \textbf{Reviews (Refereed)}
   \nocitereview{Coleine2022a}
   \nocitereview{Lofgren2021}
   \nocitereview{Selbmann2020}
@@ -365,8 +385,15 @@
 
   \bibliographybook{stajichpubs}
 
+\item \textbf{Consortia publications}
+\nociteconsortia{West2022}
+\nociteconsortia{Bidartondo2008}
+
+\bibliographyconsortia{stajichpubs}
+
 \item \textbf{Meeting and Technical Reports}
-  \nocitereport{Case2022}
+  \nocitereport{Case2022a}
+  \nocitereport{Case2022b}
   \nocitereport{DunningHotopp2020}
   \nocitereport{Pombubpa2020a}
   \nocitereport{Baltrus2019}
@@ -380,7 +407,6 @@
   \bibliographyreport{stajichpubs}
 
 \item \textbf{Commentaries and Book Reviews}
-\nocitecommentary{ODonnell2020}
 \nocitecommentary{Valent2019}
 \nocitecommentary{Stajich2016}
 \nocitecommentary{Stajich2011}
@@ -447,7 +473,7 @@ Role: Senior Personnel. PI: Egans, M (U Arkansas)
 Role: Co-PI.  PI: Anita Sil (UCSF) and Co-PIs at UC Berkeley, UC
 Davis, UC Merced, UC San Diego
 
-\item [2019-2025] Canadian Institute For Advanced Research \\
+\item [2019-2025] Canadian Institute For Advanced Research. Fellowship \\
   ``Fungal Kingdom: Threats and Opportunities'' \\
 Role: CIFAR Fellow. PI/Directors: L Cowen and J Heitman
 
@@ -463,26 +489,34 @@ Role: PI.
 ``CRISPR-mediated genome modification of \textit{Homalodisca vitripennis} for the genetic control of Pierce's disease'' \\
 Role: Co-PI. PI Peter Atkinson, UCR
 
-\item [2020-2021] USDA-ANIMAL AND PLANT HEALTH INSPECTION SERVICE \\
-``Tracking seasonal changes of endophytic communities in \textit{Fusarium} dieback - Invasive shot hole borers host trees in California.'' \\
-Role: Co-I. PI Akif Eskalen, UC Davis
-
-\item [2020-2025] United States Department of Agriculture, NIFA, Emergency Citrus Disease Research and Extension \\
+\item [2020-2025] USDA-NIFA, Emergency Citrus Disease Research and Extension \\
 ``CAP: Combining Cultural And Genetic Approaches For Grove Success To Unravel And Enhance Resistance/Tolerance To Huanglongbing.'' \\
 Role: Co-PI. PI Caroline Roper, UCR
 
-\item [2020] Burroughs Wellcome Fund. \\
-''Meeting grant to support 2020 Fungal Cellular and Molecular Biology Gordon Research Conference'' \\
-Role: PI. (postponed for 2022)
+\item [2021-2023] Canadian Institute For Advanced Research. Catalyst Award \\
+  ``Exploring the extended phenotypes of BdDV-1, a DNA mycovirus associated with enzootic strains of amphibian chytridiomycosis'' \\
+Role: Co-PI. PI: Tim James, U Michigan; Co-PI: Lillian Fritz-Laylin, U Mass Amherst; Co-PI Mat Fisher, Imperial College (UK)
+
+\item [2022-2024] Canadian Institute For Advanced Research. Catalyst Award \\
+  ``Discovering and describing fungi from deep biosphere environments'' \\
+Role: PI. Co-PI: Tim James, U Michigan
 
 \item [2022-2026] National Science Foundation. EF-2125066. \\
 ``Collaborative Research: MIM: Gut-inhabiting fungi influence structure and function of herptile microbiomes through horizontal gene transfer and novel metabolic function'' \\
   Role: PI. Collaborative linked award with 3 other PIs: J Spatafora \& K McPhail (Oregon State), D Walker (Middle Tennessee State)
 \url{https://herptilemicrobiomes.org/}
 
-\item [2022-2026] National Science Foundation. Reccomended for funding \\
+\item [2022-2026] National Science Foundation. IOS-2134912 \\
   ``Research-PGR: Impact of transposable element bursts on the rice genome and epigenome.'' \\
-Role: Co-I. PI: SR Wessler (UC Riverside). Co-I: R Schmitz (U Georgia), K Ostivek (UC Riverside), J Burnette (UC Riverside) \\
+Role: Co-I. PI: SR Wessler (UC Riverside). Co-I: R Schmitz (U Georgia), K Ostivek (UC Riverside), J Burnette (UC Riverside)
+
+\item [2022-2026] National Science Foundation. DBI-2215705 \\
+``Research Infrastructure: MRI: Acquisition of a Big Data HPC Cluster for Interdisciplinary Research and Training.'' \\
+Role: Co-I. PI: Thomas Girke (UC Riverside). Co-I: Wenxiu Ma, Mark Alber, Adam Godzik (UC Riverside)
+
+\item [2022-2027] National Science Foundation. IOS-2141858 \\
+``CAREER: Dissecting the molecular regulation of septin-mediated plant invasion by the blast fungus \textit{Magnaporthe oryzae}'' \\
+Role: Senior Personnel. PI: Martin Egan (U Arkansas)
 
 \item [{\bf Completed support}]
 
@@ -568,6 +602,18 @@ Role: PI with Co-PIs M Kalkum and S Dadwal at City of Hope Hospital
   ``Pilot investigation of avian-origin \textit{Aspergillus fumigatus} infections
 in the United States'' \\
 Role: PI. Co-PI: David Blehert, National Wildlife Health Center, USGS
+
+\item [2020] Burroughs Wellcome Fund. \\
+''Meeting grant to support 2022 Fungal Cellular and Molecular Biology Gordon Research Conference'' \\
+Role: PI.
+
+\item [2020-2021] USDA-ANIMAL AND PLANT HEALTH INSPECTION SERVICE \\
+``Tracking seasonal changes of endophytic communities in \textit{Fusarium} dieback - Invasive shot hole borers host trees in California.'' \\
+Role: Co-I. PI Akif Eskalen, UC Davis
+
+\item [2022] National Science Foundation. MCB-2227426 \\
+''Meeting grant to support Fungal Cellular and Molecular Biology Gordon Research Conference 2022'' \\
+Role: PI.
 
 \end{cvlistcompact}
 
@@ -655,13 +701,14 @@ Role: PI. Co-PI: David Blehert, National Wildlife Health Center, USGS
 \item [2015--2021] MS Student, Sawyer Masonjones. Genetics, Genomics, \&
   Bioinformatics
 \item [2015--2021] PhD Student, Nuttapon Pombubpa. Plant Pathology. \\ Current: Assistant Professor, Chulalongkorn, Bangkok, THAILAND
-\item [2016--] PhD Student, Jes\'{u}s Pe\~{n}a, Microbiology
-\item [2017--] PhD Student, Julia Adams, Plant Biology
+\item [2016--2022] PhD Student, Jes\'{u}s Pe\~{n}a, Microbiology
 \item [2017--] PhD Student, Tania Kurbessoian, Microbiology
+\item [2017--] PhD Student, Julia Adams, Plant Biology
 \item [2020--] PhD Student, Talieh Ostovar, Evolutionary Biology, San Diego State - UCR Joint Doctoral Program
 \item [2021--] PhD Student, Mark Yacoub, Microbiology
 \item [2021--] PhD Student, Cheng-Hung Tsai, Genetics, Genomics, \& Bioinformatics
 \item [2022--] PhD Student, Jessica Wu-Woods, Microbiology
+\item [2022--] PhD Student, Leila Shadmani, Microbiology
 \end{cvlistcompact}
 
 \begin{cvlistcompact}{Postdoctoral Fellows:}
@@ -687,6 +734,7 @@ Current: Assistant Professor, Institute of Zoology of Chinese Academy of Science
 Current: Postdoctoral Researcher at Salk Institute
 \item [2020--] Cassie Ettinger, Ph.D.
 \item [2020--] Kelsey Aadland, Ph.D.
+\item [2023--] Claudia Coleine, Ph.D. - Marie Curie Fellow.
 \end{cvlistcompact}
 
 \begin{cvlistcompact}{Visitors:}
@@ -716,6 +764,7 @@ IMB, Academia Sinica, Taipei, Taiwan
 \item [2019--2020] Felipe Salgado, Federal University of Rio de Janeiro, BRAZIL.
 \item [2020--2021] Omar Valencia, Volunteer.
 \item [2021--2022] Jaehyuk Choi, Incheon National University, SOUTH KOREA.
+\item [2022--2023] Xinzhan Liu, Institute of Microbiology, Chinese Academy of Sciences, CHINA.
 \end{cvlistcompact}
 
 \begin{cvlistcompact}{Staff:}
@@ -726,6 +775,7 @@ IMB, Academia Sinica, Taipei, Taiwan
 \item [2013--2014] Venkatesh Moktali, Bioinformatics Scientist (FungiDB). \\ Current: Biotech and Healthcare Product Management -  Twist Bioscience.
 \item [2017--2018] Jericho Ortanez, Junior Specialist. Current: Graduate Student, UC Riverside.
 \item [2021] Omar Valencia, Junior Specialist.
+\item [2022--] Sadikshya Sharma, Assistant Specialist.
 \end{cvlistcompact}
 
 \begin{cvlistcompact}{Teaching:}
@@ -777,34 +827,34 @@ IMB, Academia Sinica, Taipei, Taiwan
 \end{cvlistcompact}
 
 \begin{cvlistcompact}{Thesis/Dissertation committees:}
-\item [2011] Sourav Roy, PhD, GGB
-\item Yi Zhou, MS, GGB $\star$
+\item [2011] Sourav Roy, PhD, Genetics, Genomics \& Bioinformatics
+\item Yi Zhou, MS, Genetics, Genomics \& Bioinformatics $\star$
 \item [2012] Andrew Defries, PhD, Plant Sciences
 \item [2013] Gilbert Uribe, MS, Plant Pathology
-\item Divya Sain, PhD, GGB $\star$
+\item Divya Sain, PhD, Genetics, Genomics \& Bioinformatics $\star$
 \item [2014] Yizhou Wang, PhD, Plant Sciences $\star$
-\item Zhigang Wu, PhD, GGB
+\item Zhigang Wu, PhD, Genetics, Genomics \& Bioinformatics
 \item [2015] Presha Shah, PhD, Biochemistry
 \item Ming Wang, PhD, Plant Pathology
-\item Steven Ahrendt, PhD, GGB $\star$
-\item Ilva Cabrera, PhD, GGB
-\item Jinfeng Lu, PhD, GGB
+\item Steven Ahrendt, PhD, Genetics, Genomics \& Bioinformatics $\star$
+\item Ilva Cabrera, PhD, Genetics, Genomics \& Bioinformatics
+\item Jinfeng Lu, PhD, Genetics, Genomics \& Bioinformatics
 \item James Ricci, MS, Entomology
 \item [2016] Ryan Arvidson, PhD, Biochemistry
 \item Francis Na, MS, Microbiology
-\item Jishu Ha, PhD, GGB
-\item Arit Gosh, PhD, GGB
+\item Jishu Ha, PhD, Genetics, Genomics \& Bioinformatics
+\item Arit Gosh, PhD, Genetics, Genomics \& Bioinformatics
 \item Kelsey Gano, PhD, Microbiology
 \item Kun Liu, PhD, Plant Biology
-\item [2017] Raissa Green, PhD, GGB
+\item [2017] Raissa Green, PhD, Genetics, Genomics \& Bioinformatics
 \item Amelia Lindsey, PhD, Entomology
-\item Patrick Schriener, PhD, GGB
-\item Eric Smith, PhD, GGB
+\item Patrick Schriener, PhD, Genetics, Genomics \& Bioinformatics
+\item Eric Smith, PhD, Genetics, Genomics \& Bioinformatics
 \item Katherine Picard, PhD, Univ Prog in Genetics \& Genomics (Duke University)
 \item Eric Gordon, PhD, Entomology
 \item [2018] Cynthia Dick, PhD, EEOB
 \item Dan Vanderpool, PhD, Biology (University of Montana)
-\item Steven Bolaris, PhD, GGB $\triangle$
+\item Steven Bolaris, PhD, Genetics, Genomics \& Bioinformatics $\triangle$
 \item [2019] Joseph Carrillo, PhD, Plant Pathology $\triangle$
 \item Dinusha Maheepala Mudalige, PhD, Plant Biology
 \item Aaron Robinson, PhD, Biology (University of New Mexico)
@@ -813,26 +863,39 @@ IMB, Academia Sinica, Taipei, Taiwan
 \item Lluvia Vargas, PhD, Microbiolog\'{i}a (CICESE, MEXICO)
 \item Derreck Carter-House, PhD, Plant Pathology $\star$
 \item Nathan Robinett, Evolutionary Biology, Joint Doctoral Prog. SDSU-UCR $\circ$
-\item [2020] Andrea Vu, PhD,Plant Pathology
+\item [2020] Andrea Vu, PhD, Plant Pathology
 \item Nichole Ginnan, PhD, Plant Pathology
 \item Alex Rajewski, PhD, Plant Biology
 \item[2021] Nuttapon Pombubpa, PhD, Plant Pathology $\star$
 \item Caleb Hubbard, PhD, Medical and Veterinary Entomology
-\item Sawyer Masonjones, MS, GGB $\star$
-\item [ongoing] Jes\'{u}s Pe\~{n}a, Microbiology $\star$
-\item Julia Adams, Plant Biology $\star$
+\item Sawyer Masonjones, MS, Genetics, Genomics \& Bioinformatics $\star$
+\item Markus Hiltunen, PhD, Evolutionary Biology, Uppsala University (external opponent)
+\item [2022] Yi Huang, PhD, Plant Biology
+\item Jes\'{u}s Pe\~{n}a, PhD, Microbiology $\star$
+\item Hannah Schulman, PhD, Microbiology
+\item Christopher Fiscus, PhD, Genetics, Genomics \& Bioinformatics
+\item Celia Xi, PhD, Plant Biology
+\item [ongoing] Julia Adams, Plant Biology $\star$
 \item Tania Kurbessoian, Microbiology $\star$
 \item Beth Peacock, Plant Pathology
 \item Glen Morrison, Plant Biology
-\item Yi Huang, Plant Biology
-\item Christopher Ficus, GGB
-\item Glen Morrison, Plant Biology
-\item Hannah Schulman, Microbiology
+\item Talieh Ostovar, Program in Evolutionary Biology SDSU-UCR $\star$
+\item Fabiola Pulido-Chavez, Plant Pathology
+\item Dylan Enright, Microbiology
 \item Sarah Thorwall, Chemical and Environmental Engineering
 \item Samantha (Smith) Standring, Entomology
-\item Jericho Ortanez, Microbiology
+\item Jericho Orta\~{n}ez, Microbiology
 \item Peggy Brady, EEOB
-\item
+\item Hannah Freund, Genetics, Genomics, \& Bioinformatics
+\item Isaac Diaz, Genetics, Genomics, \& Bioinformatics
+\item Aidan Shands, Plant Pathology
+\item Tamsen Dunn, Program in Evolutionary Biology SDSU-UCR
+\item Angela Buehlman, Plant Biology
+\item Colin Todd, Plant Biology
+\item Mark Yacoub, Microbiology $\star$
+\item Jessica Maccaro, Entomology
+\item Aida Tafrishi, Chemical and Environmental Engineering
+\item Moira Kelly, Ghent University (external PhD Exam committee)
 
 \end{cvlistcompact}
 $\star$ Stajich is Dissertation advisor or $\triangle$ co-advisor / substitute
@@ -841,11 +904,17 @@ $\circ$ Withdrawn from program
 
 \setlength{\cvlabelwidth}{8mm}
 \begin{cvlistcompact}{\bf Invited Seminars and conference presentations (2015--Present)}
+\item [2022] $\cdot$ CIFAR Fungal Kingdom: Threats \& Opportunities, Presenter for Feb and March Meetings (Virtual)
+\item $\cdot$ Keynote speaker, Bark Beetle Mycobiome Research community meeting (Virtual)
+\item $\cdot$ Department Seminar, Scripps Institution of Oceanography, UCSD (Virtual)
+\item $\cdot$ Mycological Society of Japan Annual Meeting (Virtual)
 \item [2021] $\cdot$ CIFAR Fungal Kingdom: Threats \& Opportunities, Presenter for Feb and March Meetings
-\item $\cdot$ University of Georgia, Guest lecture for undergraduate seminar course "Genome Biology Across the Tree of Life"
-\item $\cdot$ Rochester Institute of Technology, Georgia Gosnell Seminar Series
-\item $\cdot$ Unversity of Deleware, Microbiology Graduate Program
-\item $\cdot$ Canadian Fungal Network Conference, Plenary Speaker
+\item $\cdot$ University of Georgia, Guest lecture for undergraduate seminar course "Genome Biology Across the Tree of Life" (Virtual)
+\item $\cdot$ Rochester Institute of Technology, Georgia Gosnell Seminar Series (Virtual)
+\item $\cdot$ University of Deleware, Microbiology Graduate Program (Virtual)
+\item $\cdot$ Canadian Fungal Network Conference, Plenary Speaker (Virtual)
+\item $\cdot$ Botany / Mycological Society of America 2021 meeting (Virtual)
+\item $\cdot$ Metaorganisms: Collaborative Research Center Seminar series, Germany (Virtual)
 \item [2020] $\cdot$ Microbiology and Infectious Disease Grad Student retreat speaker, Univ Texas Health Sciences, Houston, TX (postponed)
 \item [2019] $\cdot$ Phylogenomics Workshop, Cesky Krumlov, Czech Republic
 \item $\cdot$ Middle Tennessee State University, Murfreesboro, TN
@@ -859,13 +928,9 @@ $\circ$ Withdrawn from program
 \item $\cdot$ 11th International Mycological Congress. San Juan, Puerto Rico
 \item $\cdot$ CIFAR workshop "Microbial Pathogens in the Fungal Kingdom". Toronto, Ontario, CANADA
 \item [2017] $\cdot$ Oregon State University. Corvallis, OR
-\item $\cdot$
-  29th Fungal Genetics Conference. \textit{Plenary Speaker}. Pacific Grove,
-  CA.
-\item $\cdot$ Oomycete Molecular Genetics Network. \textit{Plenary
-     Speaker}. Pacific Grove, CA
-\item $\cdot$ Population Genomics of Oomycete and Fungal
-  Pathogens. Ascona, Switzerland
+\item $\cdot$ 29th Fungal Genetics Conference. \textit{Plenary Speaker}. Pacific Grove, CA.
+\item $\cdot$ Oomycete Molecular Genetics Network. \textit{Plenary Speaker}. Pacific Grove, CA
+\item $\cdot$ Population Genomics of Oomycete and Fungal Pathogens. Ascona, Switzerland
 \item $\cdot$ American Society for Microbiology Microbe Meeting. New Orleans, LA
 \item $\cdot$ FASEB Microbial Pathogenesis. Aspen, CO.
 \item $\cdot$ Mycological Society of America 2017 Meeting. Athens, GA
@@ -873,40 +938,39 @@ $\circ$ Withdrawn from program
   Pathogenesis. Washington, DC
 \item $\cdot$ Fungal Cell Wall Conference. Ensenada, Mexico
 \item $\cdot$ Whetzel-Westcott-Dimock Special Lecturer, Cornell University, Ithaca, NY
-\item [2016] $\cdot$ Mycological Society of America 2016 Meeting. Berkeley, CA.
-\item $\cdot$ CIFAR Integrated Microbial Biodiversity Program. Toronto, ON, CANADA.
-  \item $\cdot$ 13th European Fungal Genetics Conference. Paris, France.  {\it Plenary Speaker}
-  \item $\cdot$ Neurospora Conference. Asilomar Conference Center, Pacific
-    Grove, CA.
-  \item $\cdot$ Duke University, Durham, NC.
-  \item $\cdot$ University of California, Davis,
-    CA.
-  \item $\cdot$ University of Exeter. United Kingdom.
-\item [2015] $\cdot$  EMBO Conference:  Genomic complexity and diversity of eukaryotes. Sant Feliu de Guixols, SPAIN.  % \textit{Evolutionary Genomics of Early Branches  of the Fungal Tree of Life} \\
-\item $\cdot$  XI CONGRESO NATIONAL DE MICOLOGIA, Sociedad Mexicana de
-  Micologia. Merida, Yucatan, MEXICO. {\it Plenary Speaker}  %  \textit{Comparing molecular and  morphological fungal evolution through studies of fungal genomes} \\
-  \item $\cdot$ University of Arizona, Tucson, AZ. %  \textit{Evolution of complexity in fungi from evolutionary genomics of early diverging lineage} \\
-  \item $\cdot$  Eighth International Conference on Mycorrhiza. Flagstaff, AZ. % \textit{Evolutionary genomics of early branches of the   fungal tree \& the ZyGoLife project} \\
-  \item $\cdot$ %\textit{Evolutionary genomics of early branches
+%\item [2016] $\cdot$ Mycological Society of America 2016 Meeting. Berkeley, CA.
+%\item $\cdot$ CIFAR Integrated Microbial Biodiversity Program. Toronto, ON, CANADA.
+%  \item $\cdot$ 13th European Fungal Genetics Conference. Paris, France.  {\it Plenary Speaker}
+%  \item $\cdot$ Neurospora Conference. Asilomar Conference Center, Pacific
+%    Grove, CA.
+%  \item $\cdot$ Duke University, Durham, NC.
+%  \item $\cdot$ University of California, Davis, CA.
+%  \item $\cdot$ University of Exeter. United Kingdom.
+%\item [2015] $\cdot$  EMBO Conference:  Genomic complexity and diversity of eukaryotes. Sant Feliu de Guixols, SPAIN.  % \textit{Evolutionary Genomics of Early Branches  of the Fungal Tree of Life} \\
+%\item $\cdot$  XI CONGRESO NATIONAL DE MICOLOGIA, Sociedad Mexicana de
+%  Micologia. Merida, Yucatan, MEXICO. {\it Plenary Speaker}  %  \textit{Comparing molecular and  morphological fungal evolution through studies of fungal genomes} \\
+%  \item $\cdot$ University of Arizona, Tucson, AZ. %  \textit{Evolution of complexity in fungi from evolutionary genomics of early diverging lineage} \\
+%  \item $\cdot$  Eighth International Conference on Mycorrhiza. Flagstaff, AZ. % \textit{Evolutionary genomics of early branches of the   fungal tree \& the ZyGoLife project} \\
+%  \item $\cdot$ %\textit{Evolutionary genomics of early branches
     %of the fungal tree: A view from the 1000 Fungal Genomes Project
    % and ZyGoLife Project} \\
-    Mycological Society of America 2015 Meeting. Edmonton, AB, CANADA.
-  \item $\cdot$  Society for Molecular Biology \& Evolution
-    2015. Vienna, Austria. %\textit{Evolutionary genomics of early
-   % branches of the fungal tree: The 1000 Fungal Genomes Project} \\
-  \item $\cdot$  University of California, Los Angeles, CA.
-    %\textit{Evolutionary and functional genomics in early
-    %diverging fungi}    Bioinformatics Seminar series. \\
-  \item $\cdot$  University of California, Merced, CA.
-     %\textit{Evolutionary and functional genomics in early
-    %diverging fungi} \\
-  \item $\cdot$  28th Fungal Genetics Conference. Asilomar Conference
-    Center,  Pacific Grove, CA.
-     %\textit{Phylogenomics of the Zygomycete lineages: Exploring
-    %phylogeny and genome evolution} \\
-  \item $\cdot$ Oregon State University, Corvallis, OR. % \textit{Evolutionary and functional genomics in early
-    %diverging fungi} \\
-  \item $\cdot$  Oklahoma State University, Stillwater, OK. \\
+%  Mycological Society of America 2015 Meeting. Edmonton, AB, CANADA.
+%  \item $\cdot$  Society for Molecular Biology \& Evolution
+%    2015. Vienna, Austria. %\textit{Evolutionary genomics of early
+% branches of the fungal tree: The 1000 Fungal Genomes Project} \\
+%  \item $\cdot$  University of California, Los Angeles, CA.
+%    \textit{Evolutionary and functional genomics in early
+%    diverging fungi}    Bioinformatics Seminar series. \\
+%  \item $\cdot$  University of California, Merced, CA.
+%     \textit{Evolutionary and functional genomics in early
+%    diverging fungi} \\
+%  \item $\cdot$  28th Fungal Genetics Conference. Asilomar Conference
+%    Center,  Pacific Grove, CA.
+%     \textit{Phylogenomics of the Zygomycete lineages: Exploring
+%    phylogeny and genome evolution} \\
+%  \item $\cdot$ Oregon State University, Corvallis, OR. % \textit{Evolutionary and functional genomics in early
+%    %diverging fungi} \\
+%  \item $\cdot$  Oklahoma State University, Stillwater, OK. \\
 
     %\textit{Clues to multicellular evolution of fungi from
     % comparative genomics \& studies of early diverging fungi} Dept of

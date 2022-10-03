@@ -12,6 +12,7 @@ CV:
 	bibtex report
 	bibtex commentary
 	bibtex essay
+	bibtex consortia
 	pdflatex ${TEX_NAME}.tex
 	pdflatex ${TEX_NAME}.tex
 
